@@ -3,6 +3,14 @@
 ## Test QR
 ![](./frame.png)
 
+## TODO
+- Webpage
+    - Create a desktop mode
+    - Find a high resolution wallpaper
+    - Find a fullscreen solution on mobile
+    - Fix Android UI colourschemes
+
+
 QR code to supposed rick asley link prank thing \
 People visit the website \
 After 5 - 10 seconds of idle, the site glitches and changes to a message \
