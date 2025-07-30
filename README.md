@@ -5,11 +5,7 @@
 
 ## TODO
 - Webpage
-    - Create a desktop mode
-    - Find a high resolution wallpaper
-    - Find a fullscreen solution on mobile
-    - Fix Android UI colourschemes
-
+    - Create a desktop mode?
 
 QR code to supposed rick asley link prank thing \
 People visit the website \
