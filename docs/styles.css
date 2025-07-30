@@ -1,6 +1,6 @@
 body {
     background-image: url(assets/note.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: 125%;
 }
 
