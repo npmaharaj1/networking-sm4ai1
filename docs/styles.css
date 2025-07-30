@@ -1,3 +1,9 @@
+body {
+    background-image: url(assets/note.png);
+    background-repeat: no-repeat;
+    background-size: 125%;
+}
+
 .mainContainer {
     height: 100%;
     width: 100%;
@@ -7,3 +13,6 @@
     margin-top: 30vh;
 }
 
+.gif {
+    box-shadow: 0 0 16px 16px white;
+}
