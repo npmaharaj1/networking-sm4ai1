@@ -1,5 +1,8 @@
 # Random Ideas
 
+## Test QR
+![](./frame.png)
+
 QR code to supposed rick asley link prank thing \
 People visit the website \
 After 5 - 10 seconds of idle, the site glitches and changes to a message \
