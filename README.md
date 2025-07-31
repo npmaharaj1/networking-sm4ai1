@@ -4,6 +4,7 @@
 ![](./frame.png)
 
 ## TODO
+- Possibly laggy gif on Safari causing a mismatch between text and gif
 - Webpage
     - Create a desktop mode?
 
