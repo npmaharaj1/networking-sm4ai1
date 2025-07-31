@@ -1,5 +1,3 @@
-"use strict";
-
 const label = document.getElementById("label");
 const video = document.getElementById("gif");
 
