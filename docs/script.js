@@ -1,5 +1,8 @@
+"use strict";
+
+const gif = document.getElementById("gif");
+
 function transitionToHacked() {
-    const gif = document.getElementById("gif");
     const background = document.getElementsByTagName("body")[0];
     const label = document.getElementById("label");
 
@@ -47,3 +50,5 @@ function labelInit() {
     setTimeout(transitionToHacked, 15000);
 }
 
+gif.onload = labelInit;
+gif.src = "assets/video.gif";
