@@ -1,3 +1,7 @@
+hash = document.getElementById("hash");
+
+hash.innerHTML = Math.random();
+
 function transitionToHacked() {
     const gif = document.getElementById("gif");
     const background = document.getElementsByTagName("body")[0];
