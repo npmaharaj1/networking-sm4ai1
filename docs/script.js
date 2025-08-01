@@ -10,5 +10,5 @@ function labelInit() {
     setTimeout(() => {
         label.animate(fadeInAnim, 1000);
         label.removeAttribute("style");
-    }, 8291)
+    }, 8291);
 }
