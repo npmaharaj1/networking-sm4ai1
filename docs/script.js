@@ -1,13 +1,25 @@
 function transitionToHacked() {
     const gif = document.getElementById("gif");
     const background = document.getElementsByTagName("body")[0];
+    const label = document.getElementById("label");
 
-    gif.style.opacity = "0%";
+    gif.style = " opacity: 0%";
+    gif.src = "assets/bugged.gif";
     setTimeout(() => {
-        gif.style.opacity = "100%";
+        gif.style = "opacity: 100%";
     }, 500);
 
-    background.style.backgroundImage = "url(assets/hacked.gif)";
+    setTimeout(() => {
+        gif.style = "opacity: 0%";
+    }, 1000);
+
+    setTimeout(() => {
+        background.style.backgroundImage = "url(assets/hacked.gif)";
+    }, 1500);
+
+    setTimeout(() => {
+        label.style.opacity = "0%";
+    }, 1500);
 }
 
 function opacityMax(gif) {
@@ -29,7 +41,7 @@ function labelInit() {
     setTimeout(() => {
         label.animate(fadeInAnim, 1000);
         label.removeAttribute("style");
-    }, 8291)
+    }, 8291);
 
     setTimeout(transitionToHacked, 15000);
 }
