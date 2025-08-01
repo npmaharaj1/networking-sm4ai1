@@ -2,6 +2,19 @@
 
 const gif = document.getElementById("gif");
 
+function setTextTypewriterEffect(label, str, interval = 50) {
+    label.innerText = "";
+    let id;
+    let charCount = 0;
+    id = setInterval(() => {
+        charCount++;
+        if (charCount == str.length) {
+            clearInterval(id)
+        }
+        label.innerText = str.substring(0, charCount);
+    }, interval);
+}
+
 function transitionToHacked() {
     const background = document.getElementsByTagName("body")[0];
     const label = document.getElementById("label");
