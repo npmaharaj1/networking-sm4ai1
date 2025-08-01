@@ -19,8 +19,28 @@ function transitionToHacked() {
     }, 1500);
 
     setTimeout(() => {
+        background.style.backgroundImage = "url(assets/note.png)";
+        background.style.backgroundRepeat = "repeat";
+    }, 1850);
+
+    setTimeout(() => {
+        background.style.backgroundImage = "url(assets/hacked.gif)";
+        background.style.backgroundRepeat = "repeat";
+    }, 2100);
+
+    setTimeout(() => {
+        background.style.backgroundImage = "url(assets/note.png)";
+        background.style.backgroundRepeat = "repeat";
+    }, 2350);
+
+    setTimeout(() => {
+        background.style.backgroundImage = "url(assets/hacked.gif)";
+        background.style.backgroundRepeat = "repeat";
+    }, 3000);
+
+    setTimeout(() => {
         label.style.opacity = "0%";
-    }, 1500);
+    }, 3000);
 }
 
 function opacityMax(gif) {
