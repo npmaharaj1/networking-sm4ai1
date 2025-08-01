@@ -1,7 +1,6 @@
 body {
     background-image: url(assets/note.png);
-    background-repeat: no-repeat;
-    background-size: 150%; /* Compensate for different screen sizes */
+    background-size: cover;
 }
 
 .mainContainer {

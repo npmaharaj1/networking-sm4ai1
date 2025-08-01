@@ -1,5 +1,4 @@
 hash = document.getElementById("hash");
-
 hash.innerHTML = Math.random();
 
 function transitionToHacked() {
