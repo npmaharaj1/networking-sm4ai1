@@ -15,7 +15,8 @@ body {
 .gif {
     box-shadow: 0 0 1vw 1vh white;
 
-    height: 40vh;
+    height: 25vh;
+    width: auto;
 }
 
 .labelContainer {
