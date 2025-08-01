@@ -1,6 +1,25 @@
+function transitionToHacked() {
+    const gif = document.getElementById("gif");
+    const background = document.getElementsByTagName("body")[0];
+
+    gif.style.opacity = "0%";
+    setTimeout(() => {
+        gif.style.opacity = "100%";
+    }, 500);
+
+    background.style.backgroundImage = "url(assets/hacked.gif)";
+}
+
+function opacityMax(gif) {
+    gif.style.opacity = "100%";
+}
+
+function opacityMin(gif) {
+    gif.style.opacity = "0%";
+}
+
 function labelInit() {
     const label = document.getElementById("label");
-    const video = document.getElementById("gif");
 
     const fadeInAnim = [
         { filter: "drop-shadow(-4vw 0vh 1vh) drop-shadow(4vw 0vh 1vh) blur(1vh)", opacity: "0%" },
@@ -11,4 +30,7 @@ function labelInit() {
         label.animate(fadeInAnim, 1000);
         label.removeAttribute("style");
     }, 8291)
+
+    setTimeout(transitionToHacked, 15000);
 }
+
