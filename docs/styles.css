@@ -15,8 +15,7 @@ body {
 .gif {
     box-shadow: 0 0 16px 16px white;
 
-    width: 960px;
-    height: 540px;
+    height: 40vh;
 }
 
 .label {
