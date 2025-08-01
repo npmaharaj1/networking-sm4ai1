@@ -13,7 +13,7 @@ body {
 }
 
 .gif {
-    box-shadow: 0 0 16px 16px white;
+    box-shadow: 0 0 1vw 1vh white;
 
     height: 40vh;
 }
