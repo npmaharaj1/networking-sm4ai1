@@ -15,6 +15,7 @@ function transitionToHacked() {
 
     setTimeout(() => {
         background.style.backgroundImage = "url(assets/hacked.gif)";
+        background.style.backgroundRepeat = "repeat";
     }, 1500);
 
     setTimeout(() => {
