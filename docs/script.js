@@ -36,7 +36,7 @@ function transitionToHacked() {
 
     setTimeout(() => {
         background.style.backgroundImage = "url(assets/note.png)";
-        background.style.backgroundRepeat = "repeat";
+        background.style.backgroundRepeat = "";
     }, 1850);
 
     setTimeout(() => {
@@ -46,7 +46,7 @@ function transitionToHacked() {
 
     setTimeout(() => {
         background.style.backgroundImage = "url(assets/note.png)";
-        background.style.backgroundRepeat = "repeat";
+        background.style.backgroundRepeat = "";
     }, 2350);
 
     setTimeout(() => {
