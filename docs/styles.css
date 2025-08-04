@@ -1,11 +1,11 @@
 body {
     background-image: url(assets/note.png);
-    background-size: cover;
+    background-size: 150%;
 }
 
 .mainContainer {
-    height: 100%;
-    width: 100%;
+    height: 100vw;
+    width: 100vw;
 
     text-align: center;
 
@@ -13,13 +13,17 @@ body {
 }
 
 .gif {
-    box-shadow: 0 0 16px 16px white;
+    box-shadow: 0 0 1vw 1vh white;
 
-    height: 40vh;
+    width: 70%;
 }
 
-.label {
+.labelContainer {
     color: whitesmoke;
 
-    margin-top: 2vh
+    text-align: center;
+
+    margin-top: 2vh;
+
+    width: 100vw;
 }
