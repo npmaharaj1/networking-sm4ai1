@@ -4,10 +4,6 @@
 ![](./frame.png)
 
 ## TODO
-- Possibly laggy gif on Safari causing a mismatch between text and gif
-- Webpage
-    - Create a desktop mode?
-
 QR code to supposed rick asley link prank thing \
 People visit the website \
 After 5 - 10 seconds of idle, the site glitches and changes to a message \
