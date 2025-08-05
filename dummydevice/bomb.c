@@ -4,7 +4,7 @@
 
 void startAgain() {
     printf("\nIncorrect Password Entered.\n");
-    printf("Data Deletion in:\n");
+    printf("- DATA DELETION IN -\n");
     sleep(1);
     printf("3...\n");
     sleep(2);
@@ -29,7 +29,7 @@ void reroutePlayer() {
     printf("well...\n");
     sleep(3);
 
-    printf("It looks like you 'diffused' this successfully.\n");
+    printf("It looks like you've 'diffused' this successfully.\n");
     sleep(3);
     printf("It's a shame really...\n");
     sleep(2);
@@ -37,11 +37,13 @@ void reroutePlayer() {
     sleep(3);
     printf("Sending you on this goose chase provided me with great information about you and your 'team'.\n");
     sleep(3);
-    printf("It's a shame really, I was thinking about postponing the deletion but I think I'll do it anyway.\n");
+    printf("It's a shame really, I was thinking about postponing the deletion..\n");
     sleep(3);
-    printf("Stop me, if you can.");
+    printf("but I think I'll do it anyway.\n");
+    sleep(3);
+    printf("Stop me - if you can.");
     sleep(2);
-    printf("\n\nConnection Closed by peer: 192.168.1.{insert ip}. Recording Stopped.\n");
+    printf("\n\nConnection closed by peer: 192.168.1.{insert ip}.\n-RECORDING STOPPED-\n");
 }
 
 int main() {
@@ -62,14 +64,14 @@ int main() {
 
     printf("Hello defender, it looks like you have found me.\n");
     sleep(4);
-    printf("What you are looking at right now (this file) is the bomb reponsable for mass data deletion.\n");
+    printf("What you are looking at right now (this file) is the bomb responsible for mass data deletion.\n");
 
     char name[101] = "The tears of a clown make my lipstick run, but my shower cap is still intact.\n";
 
     sleep(4);
-    printf("If you fail to defuse this, you will be held responsable for everyone's data loss.\n");
+    printf("If you fail to defuse this, you will be held responsible for everyone's data loss.\n");
     sleep(4);
-    printf("Enter the correct diffuse instruction, and you win, easy right?.\n");
+    printf("Enter the correct diffuse instruction, and you win - easy right?\n");
 
     printf("Enter the password, at your own risk: ");
 
