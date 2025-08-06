@@ -6,9 +6,9 @@ const label = document.getElementById("label");
 const message = document.getElementById("messageContainer");
 
 function setTextTypewriterEffect(label, str, interval = 50) {
-    label.innerText = "";
     let id;
     let charCount = 0;
+    label.innerText = "";
     id = setInterval(() => {
         charCount++;
         if (charCount == str.length) {
@@ -16,6 +16,16 @@ function setTextTypewriterEffect(label, str, interval = 50) {
         }
         label.innerText = str.substring(0, charCount);
     }, interval);
+}
+
+function setBackground(hacked) {
+    if (hacked) {
+        background.style.backgroundImage = "url(assets/hacked.gif)";
+        background.style.backgroundRepeat = "repeat";
+    } else {
+        background.style.backgroundImage = "url(assets/note.png)";
+        background.style.backgroundRepeat = "";
+    }
 }
 
 function transitionToHacked() {
@@ -29,33 +39,13 @@ function transitionToHacked() {
         gif.style = "opacity: 0%";
     }, 1000);
 
-    setTimeout(() => {
-        background.style.backgroundImage = "url(assets/hacked.gif)";
-        background.style.backgroundRepeat = "repeat";
-    }, 1500);
+    setTimeout(setBackground, 1500, true);
+    setTimeout(setBackground, 1850, false);
+    setTimeout(setBackground, 2100, true);
+    setTimeout(setBackground, 2350, false);
 
     setTimeout(() => {
-        background.style.backgroundImage = "url(assets/note.png)";
-        background.style.backgroundRepeat = "";
-    }, 1850);
-
-    setTimeout(() => {
-        background.style.backgroundImage = "url(assets/hacked.gif)";
-        background.style.backgroundRepeat = "repeat";
-    }, 2100);
-
-    setTimeout(() => {
-        background.style.backgroundImage = "url(assets/note.png)";
-        background.style.backgroundRepeat = "";
-    }, 2350);
-
-    setTimeout(() => {
-        background.style.backgroundImage = "url(assets/hacked.gif)";
-        background.style.backgroundRepeat = "repeat";
-    }, 3000);
-
-    setTimeout(() => {
-        label.style.opacity = "0%";
+        setBackground(true);
         message.style = "display: fixed";
     }, 3000);
 }
