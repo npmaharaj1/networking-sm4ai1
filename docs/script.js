@@ -1,6 +1,6 @@
 "use strict";
 
-const background = document.getElementsByTagName("body")[0];
+const background = document.body;
 const gif = document.getElementById("gif");
 const label = document.getElementById("label");
 const message = document.getElementById("messageContainer");

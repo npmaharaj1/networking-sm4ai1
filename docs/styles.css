@@ -4,7 +4,15 @@ body {
     margin: 0px;
 }
 
-.mainContainer {
+.center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#mainContainer {
     height: 100%;
     width: 100%;
 
@@ -14,13 +22,13 @@ body {
     margin-bottom: auto;
 }
 
-.gif {
+#gif {
     box-shadow: 0 0 1vw 1vh white;
 
     width: 70%;
 }
 
-.labelContainer {
+#labelContainer {
     color: whitesmoke;
 
     text-align: center;
@@ -31,12 +39,6 @@ body {
 }
 
 #messageContainer {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-
     width: 50%;
     height: 70%;
     padding: 1vh;
