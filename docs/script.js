@@ -28,17 +28,15 @@ function setBackground(hacked) {
     }
 }
 
+function setOpacity(opacity) {
+    gif.style.opacity = opacity;
+}
+
 function transitionToHacked() {
-    gif.style = "opacity: 0%";
     gif.src = "assets/bugged.gif";
-    setTimeout(() => {
-        gif.style = "opacity: 100%";
-    }, 500);
-
-    setTimeout(() => {
-        gif.style = "opacity: 0%";
-    }, 1000);
-
+    setOpacity("0%");
+    setTimeout(setOpacity, 500, "100%");
+    setTimeout(setOpacity, 1000, "0%");
     setTimeout(setBackground, 1500, true);
     setTimeout(setBackground, 1850, false);
     setTimeout(setBackground, 2100, true);
@@ -48,14 +46,6 @@ function transitionToHacked() {
         setBackground(true);
         message.style = "display: fixed";
     }, 3000);
-}
-
-function opacityMax(gif) {
-    gif.style.opacity = "100%";
-}
-
-function opacityMin(gif) {
-    gif.style.opacity = "0%";
 }
 
 function labelInit() {
