@@ -29,3 +29,30 @@ body {
 
     width: 100vw;
 }
+
+#messageContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    width: 50%;
+    height: 70%;
+    padding: 1vh;
+    font-size: 2vh;
+
+    background-color: black;
+    border: limegreen 1vh solid;
+    border-style: ridge;
+
+    color: white;
+
+    z-index: 1;
+}
+
+#messageHeader {
+    text-align: center;
+    color: limegreen;
+    line-height: 1vh;
+}

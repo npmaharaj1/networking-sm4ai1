@@ -1,6 +1,9 @@
 "use strict";
 
+const background = document.getElementsByTagName("body")[0];
 const gif = document.getElementById("gif");
+const label = document.getElementById("label");
+const message = document.getElementById("messageContainer");
 
 function setTextTypewriterEffect(label, str, interval = 50) {
     label.innerText = "";
@@ -9,17 +12,14 @@ function setTextTypewriterEffect(label, str, interval = 50) {
     id = setInterval(() => {
         charCount++;
         if (charCount == str.length) {
-            clearInterval(id)
+            clearInterval(id);
         }
         label.innerText = str.substring(0, charCount);
     }, interval);
 }
 
 function transitionToHacked() {
-    const background = document.getElementsByTagName("body")[0];
-    const label = document.getElementById("label");
-
-    gif.style = " opacity: 0%";
+    gif.style = "opacity: 0%";
     gif.src = "assets/bugged.gif";
     setTimeout(() => {
         gif.style = "opacity: 100%";
@@ -56,6 +56,7 @@ function transitionToHacked() {
 
     setTimeout(() => {
         label.style.opacity = "0%";
+        message.style = "display: fixed";
     }, 3000);
 }
 
