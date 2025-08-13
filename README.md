@@ -19,10 +19,10 @@ To deploy this challenge, do the following \
 Build the docker image with:
 
 ```bash
-sudo docker build -t networking-sm4ai1_webserver:latest .
+sudo docker build -t networking-sm4ai1_webserver:latest ./vm/webserver
 ```
 
-Then deploy topology with
+Then deploy topology with \
 
 ```bash
 sudo containerlab deploy -t vm/topology.clab.yaml
