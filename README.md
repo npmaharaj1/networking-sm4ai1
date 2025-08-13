@@ -21,3 +21,9 @@ Build the docker image with:
 ```bash
 sudo docker build -t networking-sm4ai1_webserver:latest .
 ```
+
+Then deploy topology with
+
+```bash
+sudo containerlab deploy -t vm/topology.clab.yaml
+```
