@@ -1,0 +1,15 @@
+name: networking-sm4ai1
+topology:
+  nodes:
+    webserver:
+      kind: linux
+      image: networking-sm4ai1_webserver:latest
+      ports:
+        - "8080:80"
+
+    router:
+      kind: linux
+      image: frrouting/frr:latest
+
+  links:
+    - endpoints: ['router:eth1', 'webserver:eth1']

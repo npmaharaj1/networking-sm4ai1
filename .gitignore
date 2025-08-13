@@ -1,3 +1,9 @@
+# Dev
 .zed
+*.bak
+clab-networking-sm4ai1/
+build.sh
+
+# Compiler
 .clangd
 a.out
