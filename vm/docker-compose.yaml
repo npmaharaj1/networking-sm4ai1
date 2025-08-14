@@ -1,0 +1,7 @@
+services:
+  webserver:
+    build: ./webserver
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "10.1.1.$ADDRESS:80:80"

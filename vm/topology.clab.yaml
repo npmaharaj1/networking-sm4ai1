@@ -7,9 +7,5 @@ topology:
       ports:
         - "8080:80"
 
-    router:
-      kind: linux
-      image: frrouting/frr:latest
-
   links:
-    - endpoints: ['router:eth1', 'webserver:eth1']
+    - endpoints: ["webserver:eth1", "macvlan:wlp5s0"]

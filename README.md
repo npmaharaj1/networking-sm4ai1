@@ -14,16 +14,9 @@ Automated message appears saying that the real bomb is on the perpetrator's comp
 Players use forensic skills to disarm his computer \
 
 ## Development and Deployment
-This project makes use of `Dockerfile` and `containerlab`. \
-To deploy this challenge, do the following \
-Build the docker image with:
+This project makes use of `docker compose` (not tested with `docker-compose`).
+To deploy, clone this repository then run
 
 ```bash
-sudo docker build -t networking-sm4ai1_webserver:latest ./vm/webserver
-```
-
-Then deploy topology with \
-
-```bash
-sudo containerlab deploy -t vm/topology.clab.yaml
+sudo docker compose up -d --build
 ```
