@@ -9,10 +9,12 @@ if [[ "$1" == "deploy" ]]; then
 
             echo 'Using $COUNT'
 
-            sudo ip link add sm4ai1_bridge type bridge
-            sudo ip addr add 10.1.1.$COUNT dev sm4ai1_bridge
+            export PRECOUNT=10.0.0
 
-            ADDRESS=254; bash -c "sudo docker compose up -d --build; echo $ADDRESS"
+            sudo ip link add sm4ai1_bridge type bridge
+            sudo ip addr add $PRECOUNT.$COUNT dev sm4ai1_bridge
+
+            sudo PRECOUNT=$PRECOUNT ADDRESS=$COUNT bash -c "docker compose up -d --build"
 
             exit
         fi

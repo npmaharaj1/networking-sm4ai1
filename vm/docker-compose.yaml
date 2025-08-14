@@ -4,4 +4,4 @@ services:
     cap_add:
       - NET_ADMIN
     ports:
-      - "10.1.1.$ADDRESS:80:80"
+      - "${PRECOUNT}.${ADDRESS}:80:80"
