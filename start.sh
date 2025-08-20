@@ -2,6 +2,7 @@
 
 cd vm/
 if [[ "$1" == "deploy" ]]; then
+    cd webserver
     sudo docker compose up -d --build
 elif [[ "$1" == "destroy" ]]; then
     sudo docker rm -f $(sudo docker ps -aq) # Will error out here if not using
