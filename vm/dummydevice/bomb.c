@@ -4,7 +4,7 @@
 
 #define DD_DEFAULT_LINE_WRITE_INTERVAL (10000)
 
-static void writeLineInterval(const char* str, __useconds_t interval) {
+static void writeLineInterval(const char* str, useconds_t interval) {
     // note: char literals are of type int for some reason
     int c;
     while ((c = *str) != '\0') {
