@@ -1,2 +1,2 @@
 bomb:
-	clang bomb.c -o bomb.o
+	gcc bomb.c -o bomb.o
