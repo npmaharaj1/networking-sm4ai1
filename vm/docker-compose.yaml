@@ -1,7 +1,10 @@
 services:
   webserver:
     build: ./webserver
-    cap_add:
-      - NET_ADMIN
     ports:
-      - "${PRECOUNT}.${ADDRESS}:80:80"
+      - "80:80"
+
+  not-source:
+    build: ./dummydevice
+    ports:
+      - "22:22"
