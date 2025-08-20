@@ -7,4 +7,5 @@ RUN apk update && apk add openssh gcc build-base libc-dev make &&\
     ssh-keygen -A &&\
     mkdir -p /var/run/sshd &&\
     make 
-CMD ["/usr/sbin/sshd -D"]
+EXPOSE 22
+CMD ["/usr/sbin/sshd", "-D"]
