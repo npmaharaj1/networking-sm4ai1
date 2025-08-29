@@ -4,14 +4,16 @@
 ![](./frame.png)
 
 ## TODO
-QR code to supposed rick asley link prank thing \
-People visit the website \
-After 5 - 10 seconds of idle, the site glitches and changes to a message \
-Message notifies viewer that they have until a due date to stop data deletion \
-Players will find the device that handles the data deletion \
-Players must defuse the "bomb" \
-Automated message appears saying that the real bomb is on the perpetrator's computer \
-Players use forensic skills to disarm his computer \
+Players scan qr code and navigate to hacked website
+Players do a directory scan of that website with a wordlist and discover a /admin page
+Players try common credentials such as username: admin and password: password123!
+When looking inside the admin panel, users discover a novnc shell page in which they can access the host device
+Players try to find out how this machine got hacked and discover an ssh history from a specified ip address (some ssh log)
+Players do an nmap scan and discover an ftp port (21) is open and allows anonymous access
+Players do this to gain an ssh key pair so they now have access to the "hackers" pc
+Players discover a bomb.o file which allegedly is responsible for the mass data deletion.
+Upon solving the file, users discover that they are not on the real bomb.o
+Players scan the provided ip address and brute force their way into the real pc and nullify the threat
 
 ## Development and Deployment
 This project makes use of `docker compose` (not tested with `docker-compose`).
