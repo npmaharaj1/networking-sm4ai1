@@ -1,0 +1,16 @@
+.pagecontainer {
+    text-align: center;
+}
+
+.textbox {
+    margin: 5px;
+
+}
+
+#username {
+    margin-top: 20vh;
+}
+
+.submit {
+    margin-top: 1vh;
+}
