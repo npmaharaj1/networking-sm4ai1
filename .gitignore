@@ -8,4 +8,6 @@ build.sh
 .clangd
 a.out
 
+logs/
 *.log
+ssh_conf/
