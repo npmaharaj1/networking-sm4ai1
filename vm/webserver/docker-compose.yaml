@@ -1,10 +1,15 @@
 services:
 
   webserver:
-    build: ./Server
+    image: seigetsu/httpd-sshd:2.4-alpine
     ports:
       - "80:80"
-      - "2222:2222"
+      - "2232:2222"
+    environment:
+      SSH_PORT: 2222
+      ROOT_PASSWORD: root 
+    volumes:
+      - ./Server/docs:/usr/local/apache2/htdocs/
 
   web:
     container_name: nginx
@@ -62,3 +67,21 @@ services:
       # - ./grafana/data:/var/lib/grafana
       - ./grafana/provisioning/:/etc/grafana/provisioning/
     restart: always
+
+  testssh:
+    image: rastasheep/ubuntu-sshd:18.04
+
+  testopenssh:
+    image: linuxserver/openssh-server
+    environment:
+      - LOG_STDOUT=true
+    volumes:
+      - ./ssh_conf:/config
+
+  websockify:
+    image: jwnmulder/websockify
+    ports:
+    - 2222:2222
+    command:
+    - '2222'
+    - 'testssh:22'
