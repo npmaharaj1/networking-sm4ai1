@@ -74,6 +74,7 @@ static void reroutePlayer(void) {
 }
 
 int main(int argc, char** argv) {
+    char* key = "The tears of a clown make my lipstick run, but my shower cap is still intact.";
     writeLine("\n");
 
     writeLineInterval(

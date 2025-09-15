@@ -7,6 +7,7 @@ build.sh
 # Compiler
 .clangd
 a.out
+*.o
 
 logs/
 *.log
