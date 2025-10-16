@@ -1,2 +1,2 @@
 bomb:
-	gcc bomb.c -o bomb.o
+	gcc bomb.c -o dummydevicestorage/bomb.o
