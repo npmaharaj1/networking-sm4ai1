@@ -8,7 +8,5 @@ services:
       - "PERMITTED=*"
     volumes:
       - "./dummydevicestorage:/nfsshare"
-      - "./authorized_keys:/root/.ssh/authorized_keys"
     ports:
       - "2049:2049"
-
