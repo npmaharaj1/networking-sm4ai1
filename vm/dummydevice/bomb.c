@@ -69,7 +69,7 @@ static void reroutePlayer(void) {
     writeLineInterval("if you can.\n", 200000);
     sleep(4);
 
-    printf("\nConnection closed by peer: 192.168.1.{insert ip}\n");
+    printf("\nConnection closed by peer: 10.1.1.257\n");
     printf("-RECORDING STOPPED-\n");
 }
 
