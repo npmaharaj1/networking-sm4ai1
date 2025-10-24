@@ -3,6 +3,7 @@ services:
     image: itsthenetwork/nfs-server-alpine:latest-arm
     container_name: nfs
     privileged: true
+    restart: unless-stopped
     environment:
       - "SHARED_DIRECTORY=/nfsshare"
       - "PERMITTED=*"
