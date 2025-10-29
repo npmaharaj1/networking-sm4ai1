@@ -1,7 +1,7 @@
 FROM debian:trixie
 WORKDIR /assets
 
-COPY ./image.txt ./
+COPY ./flag.gif /home/app/flag.gif
 RUN apt update && apt upgrade -y && apt install bash iputils-ping openssh-server -y && \
     useradd app && \
     echo "app:871005" | chpasswd && \
