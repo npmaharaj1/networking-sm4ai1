@@ -1,6 +1,8 @@
 services:
   webserver:
     image: httpd:trixie
+    privileged: true
+    restart: unless-stopped
     ports:
       - "80:80"
       - "8080:8080"
@@ -8,3 +10,5 @@ services:
       - "./docs:/usr/local/apache2/htdocs/"
       - "./init.sh:/etc/init.sh"
     command: bash -c "(apt update && apt install ftp wget libwebsockets-dev iproute2 -y && cd / && wget https://github.com/tsl0922/ttyd/releases/download/1.7.7/ttyd.aarch64 && chmod u+x /ttyd.aarch64 && /ttyd.aarch64 -i eth0 -p 8080 -W bash &) && httpd-foreground"
+      - "./nfs:/nfs"
+      - "./fstab:/etc/fstab"
