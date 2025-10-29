@@ -2,7 +2,8 @@ FROM debian:trixie
 WORKDIR /assets
 
 COPY ./flag.gif /home/app/flag.gif
-RUN apt update && apt upgrade -y && apt install gif-for-cli bash exiftool iputils-ping openssh-server -y && \
+RUN apt update && apt upgrade -y && apt install ffmpeg zlib* libjpeg* python3-setuptools gif-for-cli bash exiftool iputils-ping openssh-server -y && \
+    pip3 install --user gif-for-cli && \
     useradd app && \
     echo "app:871005" | chpasswd && \
     ssh-keygen -A && \
