@@ -1,10 +1,13 @@
 services:
   thedevice:
-    image: debian:trixie
-    ports:
-      - "21:21"
-      - "22:22"
-    command: bash -c "apt update && apt install ftp vsftpd -y && echo 'local_root=/' >> /etc/vsftpd.conf && echo 'starting ftpd...' && /usr/sbin/vsftpd /etc/vsftpd.conf"
+    image: itsthenetwork/nfs-server-alpine:latest-arm
+    container_name: nfs
+    privileged: true
+    restart: unless-stopped
+    environment:
+      - "SHARED_DIRECTORY=/nfsshare"
+      - "PERMITTED=*"
     volumes:
-      - "./bomb.c:/bomb.c"
-      - "./Makefile:/Makefile"
+      - "./dummydevicestorage:/nfsshare"
+    ports:
+      - "2049:2049"

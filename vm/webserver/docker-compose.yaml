@@ -11,4 +11,4 @@ services:
       - "./init.sh:/etc/init.sh"
       - "./nfs:/nfs"
       - "./fstab:/etc/fstab"
-    command: bash -c "(apt update && apt install wget iputils-ping nfs-common libwebsockets-dev iproute2 -y && cd / && wget https://github.com/tsl0922/ttyd/releases/download/1.7.7/ttyd.aarch64 && chmod u+x /ttyd.aarch64 && /ttyd.aarch64 -i eth0 -p 8080 -W bash &) && httpd-foreground"
+    command: bash -c "(apt update && apt install iputils-ping nfs-common ftp wget libwebsockets-dev iproute2 -y && cd / && wget https://github.com/tsl0922/ttyd/releases/download/1.7.7/ttyd.aarch64 && chmod u+x /ttyd.aarch64 && /ttyd.aarch64 -i eth0 -p 8080 -W bash &) && httpd-foreground"
