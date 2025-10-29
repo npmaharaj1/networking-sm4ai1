@@ -1,5 +1,10 @@
 services:
   thedevice:
-    build: .
+    image: debian:trixie
     ports:
+      - "21:21"
       - "22:22"
+    command: bash -c "apt update && apt install ftp vsftpd -y && echo 'local_root=/' >> /etc/vsftpd.conf && echo 'starting ftpd...' && /usr/sbin/vsftpd /etc/vsftpd.conf"
+    volumes:
+      - "./bomb.c:/bomb.c"
+      - "./Makefile:/Makefile"

@@ -6,4 +6,5 @@ services:
       - "8080:8080"
     volumes:
       - "./docs:/usr/local/apache2/htdocs/"
-    command: bash -c "(apt update && apt install wget libwebsockets-dev iproute2 -y && cd / && wget https://github.com/tsl0922/ttyd/releases/download/1.7.7/ttyd.aarch64 && chmod u+x /ttyd.aarch64 && /ttyd.aarch64 -i eth0 -p 8080 -W bash &) && httpd-foreground"
+      - "./init.sh:/etc/init.sh"
+    command: bash -c "(apt update && apt install ftp wget libwebsockets-dev iproute2 -y && cd / && wget https://github.com/tsl0922/ttyd/releases/download/1.7.7/ttyd.aarch64 && chmod u+x /ttyd.aarch64 && /ttyd.aarch64 -i eth0 -p 8080 -W bash &) && httpd-foreground"

@@ -1,0 +1,7 @@
+services:
+  therealdevice:
+    image: therealdevice:latest 
+    build: .
+    container_name: thefinaldevice
+    ports:
+      - 2222:22

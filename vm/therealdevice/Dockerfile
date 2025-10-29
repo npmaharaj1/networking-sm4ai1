@@ -1,0 +1,14 @@
+FROM debian:trixie
+WORKDIR /assets
+
+COPY ./image.txt ./
+RUN apt update && apt upgrade -y && apt install bash iputils-ping openssh-server -y && \
+    useradd app && \
+    echo "app:871005" | chpasswd && \
+    ssh-keygen -A && \
+    mkdir -p /var/run/sshd && \
+    mkdir -p /home/app && \
+    sed -i -e 's/#PasswordAuthentication yes/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+
+EXPOSE 2222
+CMD [ "/bin/bash", "-l", "-c", "/usr/sbin/sshd -D" ]
