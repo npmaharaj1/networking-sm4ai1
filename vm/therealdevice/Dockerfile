@@ -2,7 +2,7 @@ FROM debian:trixie
 WORKDIR /assets
 
 COPY ./flag.gif /home/app/flag.gif
-RUN apt update && apt upgrade -y && apt install bash exiftool iputils-ping openssh-server python3 -y && \
+RUN apt update && apt upgrade -y && apt install bash exiftool iputils-ping openssh-server -y && \
     useradd app && \
     echo "app:871005" | chpasswd && \
     ssh-keygen -A && \

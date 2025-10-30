@@ -3,5 +3,6 @@ services:
     image: therealdevice:latest 
     build: .
     container_name: thefinaldevice
+    restart: unless-stopped
     ports:
       - 2222:22
