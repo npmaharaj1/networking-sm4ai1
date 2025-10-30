@@ -11,4 +11,4 @@ services:
       - "./nfs:/nfs"
       - "./fstab:/etc/fstab"
       - "./message:/message"
-    command: bash -c "(apt update && apt install sudo iputils-ping nfs-common ftp wget libwebsockets-dev iproute2 nmap -y && mkdir /home/appuser && useradd appuser && chown appuser:appuser /home/appuser && cd /  && sudo -H -u appuser bash -c 'wget -O /home/appuser/ttyd.aarch64 https://github.com/tsl0922/ttyd/releases/download/1.7.7/ttyd.aarch64 && chmod u+x /home/appuser/ttyd.aarch64 && /home/appuser/ttyd.aarch64 -i eth0 -p 8080 -W bash &') && mount -a && httpd-foreground"
+    command: bash -c "(apt update && apt install sudo iputils-ping nfs-common ftp wget libwebsockets-dev binutils iputils-ping iproute2 nmap -y && useradd appuser && mkdir /home/appuser && chown appuser:appuser /home/appuser && cd /  && sudo -H -u appuser bash -c 'wget -O /home/appuser/ttyd.aarch64 https://github.com/tsl0922/ttyd/releases/download/1.7.7/ttyd.aarch64 && chmod u+x /home/appuser/ttyd.aarch64 && /home/appuser/ttyd.aarch64 -i eth0 -p 8080 -W bash &') && mount -a && httpd-foreground"
