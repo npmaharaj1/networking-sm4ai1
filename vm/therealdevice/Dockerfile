@@ -4,7 +4,7 @@ WORKDIR /assets
 COPY ./flag.gif /home/app/flag.gif
 RUN apt update && apt upgrade -y && apt install bash exiftool iputils-ping openssh-server -y && \
     useradd app && \
-    echo "app:871005" | chpasswd && \
+    echo "app:456789"| chpasswd && \
     ssh-keygen -A && \
     mkdir -p /var/run/sshd && \
     mkdir -p /home/app && \
